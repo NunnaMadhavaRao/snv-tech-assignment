@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme: any) =>
             position: 'relative',
         },
         buttonOverlay: {
+            background : '#ff713c',
+            color : 'white',
             position: 'absolute',
             top: '50%',
             right: '5px',
@@ -21,7 +23,7 @@ function Subscribe(props: any) {
 
     return (
         <Container maxWidth="sm" style={{
-            background: "orange",
+            background: "orangered",
             borderRadius: "5px",
             padding: "3rem",
             marginTop: "6.5rem"
@@ -39,7 +41,7 @@ function Subscribe(props: any) {
                                 fullWidth
                                 style={{
                                     background: "white",
-                                    border: "5px solid orange",
+                                    border: "5px solid orangered",
                                     outline: 'none'
                                 }}
                             />

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Grid, Typography, createStyles, makeStyles } from '@material-ui/core';
 import deviceMock from '../../assets/device-mock.png';
+import appStore from '../../assets/app-store.svg';
+import playStore from '../../assets/playstore.svg';
 
 const useStyles = makeStyles((theme: any) =>
     createStyles({
@@ -17,7 +19,6 @@ const useStyles = makeStyles((theme: any) =>
             minHeight: '400px'
         },
         smallDevice: {
-            backgroundImage: `url(${deviceMock}) no-repeat`,
             width: "180px",
             position: 'relative',
             marginRight: "-20px",
@@ -35,7 +36,6 @@ const useStyles = makeStyles((theme: any) =>
         largeDevice: {
             position: 'relative',
             width: "240px",
-            backgroundImage: `url(${deviceMock})  no-repeat`,
         },
         lgOverlayImg: {
             position: 'absolute',
@@ -46,6 +46,13 @@ const useStyles = makeStyles((theme: any) =>
             top: '29px',
             borderRadius: '20px'
         },
+        storeIcon: {
+            width: '60px',
+            padding : '5px',
+            borderRadius : '8px',
+            margin : '1px',
+            background: "rgba(225,225,225,.5)"
+        }
     }),
 );
 
@@ -54,10 +61,22 @@ function Footer(props: any) {
     return (
         <Container maxWidth="xl" className={`${classes.p0} ${classes.footer}`}>
             <Container maxWidth="xl">
-
                 <Grid container direction="row" alignItems="center" justifyContent="center" >
                     <Grid item xs={12} md={6} >
-                        <Typography variant='h3'>Stay Updated <br></br> With Our <br></br> App!!</Typography>
+                        <Typography variant='h3' style={{lineHeight: 1.4}}>Stay Updated <br></br> With Our <br></br> App!!</Typography>
+
+                        <Grid container direction="row" alignItems="center" style={{marginTop : "60px"}}>
+                            <Typography  variant='h6' style={{marginRight : '30px', color:"orangered", fontWeight:'bold'}}>
+                                Download now!
+                            </Typography>
+
+                            <div>
+                                <img className={classes.storeIcon} src={playStore} alt="playstore" />
+                                <img className={classes.storeIcon} src={appStore} alt="app store" />
+                            </div>
+                        </Grid>
+
+
                     </Grid>
                     <Grid item xs={12} md={6} className={classes.mediaSection}>
                         <Grid container direction="row" justifyContent='flex-end' alignItems='baseline' style={{ marginTop: "-100px" }}>
@@ -72,6 +91,7 @@ function Footer(props: any) {
                         </Grid>
                     </Grid>
                 </Grid>
+
             </Container>
         </Container>
     );
