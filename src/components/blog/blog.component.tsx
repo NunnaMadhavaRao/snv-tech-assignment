@@ -3,6 +3,7 @@ import React from 'react';
 import AddIcon from '@material-ui/icons/Add';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import MediaObject from '../media-object/media-object.component';
+import Subscribe from '../subscribe/subscribe.component';
 
 const useStyles = makeStyles((theme: any) =>
     createStyles({
@@ -127,6 +128,8 @@ function Blog(props: any) {
                     })
                 }
             </Grid>
+
+            <Subscribe />
 
         </Container>
     );
