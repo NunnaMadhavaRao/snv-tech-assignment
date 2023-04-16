@@ -24,7 +24,7 @@ function BreadCrumb(props: any) {
             <Grid container direction="row" alignItems="center" >
                 <Typography variant='body2' className={`${classes.m2} ${classes.active}`}>Home</Typography> /
                 <Typography variant='body2' className={classes.m2}>Blog</Typography> /
-                <Typography variant='body2' className={classes.m2}>my new blog</Typography>
+                <Typography variant='body2' className={classes.m2}>My new Blog</Typography>
             </Grid>
         </Container>
     );
